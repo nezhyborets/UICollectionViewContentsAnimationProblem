@@ -40,3 +40,5 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
     return size
 }
 ```
+
+I get the same results when using `collectionView.setCollectionViewLayout(newLayout, animated: true)`, and there is no animation at all when using `collectionView.collectionViewLayout.invalidateLayout()` instead of `reloadData() inside batchUpdates`.
