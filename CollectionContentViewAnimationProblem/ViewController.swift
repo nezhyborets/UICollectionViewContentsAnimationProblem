@@ -50,6 +50,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //        collectionView.collectionViewLayout.invalidateLayout()
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        for view in cell.contentView.subviews {
+            print(view)
+            print(view.constraints)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let isSelected = self.selectedIndex == indexPath.row
